@@ -1,0 +1,11 @@
+# Further Imporvements
+- [ ] Display
+    - [ ] Display hashes with colors
+    - [ ] Display branch types groups
+- [ ] Configuration
+    - [ ] Cache branches
+    - [ ] Cache branch types
+    - [ ] Configure branch types or initialize with default
+- [ ] Delete
+    - [ ] Delete by branch type
+    - [ ] Clean repository efficiently
