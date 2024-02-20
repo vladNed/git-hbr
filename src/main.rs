@@ -13,7 +13,6 @@ fn main() {
             println!("== Failed to open repo ==");
             return;
         }
-
     };
 
     let mut branches = core::load_branches(repo.branches(Some(git2::BranchType::Local)).unwrap());
