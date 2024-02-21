@@ -1,13 +1,13 @@
-mod branch;
+pub mod repo_extension;
 
-pub fn load_branches(branches: git2::Branches) -> branch::BranchVec {
-    let mut branches_vec: Vec<branch::Branch> = vec![];
-    for branch in branches {
-        let (branch, _) = branch.unwrap();
-        let name = branch.name().unwrap().unwrap();
-        let branch = branch::Branch::new(name.to_string());
-        branches_vec.push(branch);
-    }
+use sha2::{Digest, Sha256};
 
-    branch::BranchVec::new(branches_vec)
+pub fn hash_name(branch_name: &str) -> String {
+    let mut hash = Sha256::new();
+    hash.update(branch_name.as_bytes());
+    format!("{:.6x}", hash.finalize())
+}
+
+pub(super) fn omit_branches() -> Vec<&'static str> {
+    vec!["master", "develop", "main"]
 }
