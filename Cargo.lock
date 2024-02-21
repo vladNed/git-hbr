@@ -360,8 +360,9 @@ dependencies = [
 
 [[package]]
 name = "rit"
-version = "0.1.0"
+version = "0.2.0"
 dependencies = [
+ "ansi_term",
  "dialoguer",
  "git2",
  "sha2",

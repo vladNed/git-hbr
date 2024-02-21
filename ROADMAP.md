@@ -1,6 +1,6 @@
 # Further Imporvements
 - [ ] Display
-    - [ ] Display hashes with colors
+    - [x] Display hashes with colors
     - [ ] Display branch types groups
 - [ ] Configuration
     - [ ] Cache branches

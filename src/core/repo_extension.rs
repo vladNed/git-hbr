@@ -1,4 +1,5 @@
 use dialoguer::{theme::ColorfulTheme, Confirm};
+use ansi_term::Colour;
 
 pub struct RepositoryExtension {
     repo: git2::Repository,
@@ -33,7 +34,7 @@ impl RepositoryExtension {
             } else {
                 super::hash_name(branch_name)
             };
-            println!("   :: [{}] {}", branch_name_hash, branch_name);
+            println!("   :: [{}] {}", Colour::Green.bold().paint(branch_name_hash), branch_name);
         }
     }
 
