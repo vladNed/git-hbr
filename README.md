@@ -32,3 +32,28 @@ Within a git repository, you can use the following commands:
 - `rit list` - List all branches
 - `rit list <branch_type>` - List all branches of a specific type. The branch type can be `feature`, `bugfix` or `hotfix`.
 - `rit delete <branch_hash>` - Delete a branch using the branch hash. A partial hash can be also used instead of the full hash.
+
+### List
+
+Example:
+```bash
+$ rit list
+   :: [omitted] develop
+   :: [240e4a] feature/c-12345/asd
+   :: [48277c] feature/c-s92ls/fgas123
+   :: [omitted] main
+```
+
+### Delete
+
+Example:
+```bash
+$ rit delete 2 482
+Deleting following branches:
+   - feature/c-12345/asd
+   - feature/c-s92ls/fgas123
+✔ Are you sure you want to delete these branches? · yes
+Deleting branch: feature/c-12345/asd
+Deleting branch: feature/c-s92ls/fgas123
+```
+
