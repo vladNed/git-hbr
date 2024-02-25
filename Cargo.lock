@@ -171,6 +171,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "git-hbr"
+version = "0.2.0"
+dependencies = [
+ "ansi_term",
+ "dialoguer",
+ "git2",
+ "sha2",
+ "structopt",
+]
+
+[[package]]
 name = "git2"
 version = "0.18.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -356,17 +367,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "291ec9ab5efd934aaf503a6466c5d5251535d108ee747472c3977cc5acc868ef"
 dependencies = [
  "proc-macro2",
-]
-
-[[package]]
-name = "rit"
-version = "0.2.0"
-dependencies = [
- "ansi_term",
- "dialoguer",
- "git2",
- "sha2",
- "structopt",
 ]
 
 [[package]]

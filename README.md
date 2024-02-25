@@ -1,9 +1,9 @@
-# RIT (Rust Git Assistant)
+# git-hbr (Hashed Branch GIT Supplement)
 
-RIT is a simple git assistant written in Rust. It is a command line tool that helps you to manage your git repositories.
+`git-hbr` is a simple git assistant written in Rust. It is a command line tool that helps you to manage your git repositories.
 Written out of curiosity on what can be done to better manage git branches, this project was also inspired from how a
 user usually deletes containers in Docker.
-Using the simplicity of hashes, RIT is able to manage branches in a unique way.
+Using the simplicity of hashes, `git-hbr` is able to manage branches in a unique way.
 
 ## Installation
 
@@ -25,19 +25,13 @@ cargo test
 
 ## Usage
 
-After the installation, you can use the `rit` command to manage your git repositories branches.
-
-Within a git repository, you can use the following commands:
-
-- `rit list` - List all branches
-- `rit list <branch_type>` - List all branches of a specific type. The branch type can be `feature`, `bugfix` or `hotfix`.
-- `rit delete <branch_hash>` - Delete a branch using the branch hash. A partial hash can be also used instead of the full hash.
+After the installation, you can use the `git hbr` command to manage your git repositories branches.
 
 ### List
 
 Example:
 ```bash
-$ rit list
+$ git hbr -l
    :: [omitted] develop
    :: [240e4a] feature/c-12345/asd
    :: [48277c] feature/c-s92ls/fgas123
@@ -48,7 +42,7 @@ $ rit list
 
 Example:
 ```bash
-$ rit delete 2 482
+$ git hbr 240 482
 Deleting following branches:
    - feature/c-12345/asd
    - feature/c-s92ls/fgas123

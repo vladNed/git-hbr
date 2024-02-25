@@ -18,8 +18,9 @@ fn main() {
     };
 
     let repo_ext = RepositoryExtension::new(repo);
-    match opt {
-        cli::Opt::List { branch_type } => repo_ext.list(branch_type),
-        cli::Opt::Delete { branch_hashes } => repo_ext.delete_branch(branch_hashes),
+    if opt.listing {
+        repo_ext.list(None);
+    } else {
+        repo_ext.delete_branch(opt.branch_hashes);
     }
 }

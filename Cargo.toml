@@ -1,5 +1,5 @@
 [package]
-name = "rit"
+name = "git-hbr"
 version = "0.2.0"
 authors = ["Vlad Nedelcu <nedelcuvd@gmail.com>"]
 edition = "2021"
